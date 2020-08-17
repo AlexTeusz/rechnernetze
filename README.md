@@ -1,9 +1,14 @@
-<h1>Inhaltsverzeichnis</h1>
-{{TOC}}
+Das folgende Dokument beschreibt die komplette Implementierung eines Linux-basierten Unternehmensnetzwerkes. Dabei wird ein fiktives Unternehmen erstellt, welches als Beispiel dient.
 
+Um die unten genannten Konfigurationen, Dateien und Netzwerke selbstständig testen zu können, lade bitte die folgende VirtualBox Datei herunter:
+
+- [Download OVA File](https://alexteusz.s3-eu-west-1.amazonaws.com/repos/rechnernetze/CompanyNetwork.ova)
+
+Die Publikation kann hier heruntergeladen werden:
+
+- [Planung und Implementierung eines Linux-baiserten LAN](http://doi.org/10.5281/zenodo.3987837)
+  
 # 1 Einleitung
-
-Im Rahmen eines Masterseminars im Studiengang der Informationswissenschaft und Sprachtechnologie an der Heinrich-Heine-Universität Düsseldorf wurden die theoretischen und praktischen Grundlagen zur Erstellung moderner Rechnernetze besprochen. Diese Seminararbeit dient als praktische Anwendung des gelernten Wissens. Dabei wurden alle nicht zitierten Inhalte aus den Kursnotizen entnommen.
 
 In der heutigen Zeit kann behauptet werden, dass fast alle elektronischen Dienste und Programme, die im Alltag verwendet werden, Zugang zum sogenannten Internet besitzen. Angefangen als Vernetzung mehrerer Universitäten namens Arpanet in den 1960er Jahren (Braun, 2019, S. 15), wurde dieses Netzwerk mithilfe des Erfinders Tim Berners-Lee zum heute bekannten World Wide Web (WWW). In einem Interview mit dem Wired Magazine sagte Berners-Lee, das Internet sei seiner Meinung nach längst nicht fertig (Wired, 1999). Fast 21 Jahre nach diesem Interview wächst das einst kleine Rechnernetz immer noch, wobei es gefühlt täglich neue Anwendungen und AnwenderInnen findet. Clement (2019) zeigt in einer Statistik, dass es 2017 ungefähr 3,9 Milliarden Internetnutzer gab, die auf dem gesamten Planeten verteilt verschiedenste Anfragen stellten. Dabei werden diese Anfragen nicht allein von Computern gestellt, die an einem festen Platz aufgebaut sind. Seit Erfindung des Smartphones und der Einführung des Web 2.0, vernetzen sich auch Telefone, TV-Geräte oder smarte Uhren mit dem Internet.
 
