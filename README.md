@@ -9,7 +9,6 @@ In der heutigen Zeit kann behauptet werden, dass fast alle elektronischen Dienst
 
 Um diese weltweite Vernetzung nachzuvollziehen, werden die folgenden Kapitel auf die Grundlagen der Netzwerktechnologie und praktische Anwendung anhand eines Beispielunternehmens eingehen. Schlussendlich wird mithilfe des implementierten Beispiels eine Netzwerkarchitektur vorgezeigt und beschrieben. Dieses Ergebnis dient darauf als Ausgangspunkt für eine abschließende Diskussion der umgesetzten Theorien und Ansätze.
 
-+++
 # 2 Grundlagen: Rechnernetze in der Theorie
 
 Aufgrund der Tatsache, dass das Internet bereits seit einiger Zeit öffentlich verwendet wird, haben sich die Ansätze zur Erstellung eines Rechnernetzes des Öfteren geändert. Das folgende Kapitel beschreibt die standarisierten Elemente, Vorgehensweisen und dient als Grundlage des darauffolgenden praktischen Methodenteils. 
@@ -27,20 +26,17 @@ Die über das Netzwerk verbundenen Endgeräte stellen typischerweise Computer od
 
 Die Kommunikation der verbundenen Geräte kann entweder direkt von Endgerät zu Endgerät ablaufen oder über einen Router, der die angefragten und versendeten Datenpakete in einer Art Postbotenfunktion den verschiedenen Geräten zuweist. Im Falle eines Routers verbinden sich alle Hosts mit einem Gerät welches die gesamte Netzwerkverwaltung, -überwachung und -konfiguration übernimmt. 
 
-+++
 ### 2.1.3 Stern-Topologie
 
 Dabei werden die Geräte in modernen Rechnernetzen in einer Art Sternform mit dem Router oder einem sogenannten Switch verbunden (Bühler, Schlaich & Sinner, 2018, S. 69). Der Switch wird eingesetzt, um die Menge an Kabelanschlüssen am Router zu erweitern. 
 
-<center>
 ![Stern Typologie](assets/images/sternTopologieBuehler.png)
-</center>
 <center>Abbildung 1: Stern-Topologie</center>
 <center>Quelle: Bühler, Schlaich & Sinner, 2018, S.69</center>
 
 Gegenüber den Vorgängern Bus-Topologie und Ring-Topologie, bietet die moderne Vorgehensweise mehrere Vorteile. Einerseits können beliebig viele Switches in das vorhandene Netzwerk eingebunden werden, um eine Netzwerkerweiterung zu gewährleisten, andererseits können Hosts auch mittels der Wireless Area Local Network (WLAN) Technologie kabellos verbunden werden. Nichtsdestotrotz besteht anfangs ein hoher Verkabelungsaufwand, damit alle Hosts mit den Switches verbunden sind. Des Weiteren verlieren alle Hosts die Verbindung, sollte der zugewiesene Switch ausfallen (Bühler, Schlaich & Sinner, 2018, S.69 ff.).
 
-+++
+
 ### 2.1.4 ISO-Schichten
 
 Theoretisch sind die Geräte mittels der bereits angesprochenen Ansätze mit dem Netzwerk verbunden. Praktisch muss diese Verbindung jedoch weiter ausgeführt und definiert werden. Was nämlich grundlegend fehlt, ist die Funktionalität der Kommunikation. Es kann gesagt werden, dass die Netzwerkkommunikation mithilfe versendeter und empfangener Nachrichten von Statten geht. Ein Computer fragt etwas mittels Nachricht an und erhält bestenfalls ein Antwort.
@@ -51,9 +47,7 @@ Die Nachrichten werden Protokolle genannt, die auf verschiedenen Schichten unter
 
 Insgesamt besteht das Modell (siehe Abbildung 2) aus sieben Schichten, die abhängig der aktuellen Aufgabe von unten oder oben durchlaufen werden. Sendet ein Host eine Nachricht, startet der Verkehr in der physikalischen Schicht (Physical Layer). Empfängt der Host eine Antwort, wird diese über die Anwendungsschicht an die weiteren Ebenen vermittelt (Microsoft, 2020).
 
-<center>
 ![ISO Modell Microsoft](assets/images/isomodellmicrosoft.png)
-</center>
 <center>Abbildung 2: The OSI Reference Model</center>
 <center>Quelle: Microsoft, 2020</center>
 
@@ -87,9 +81,7 @@ Es gibt zwei verschiedene IP-Adressversionen: IPv4 und IPv6, wobei Erstere die m
 
 Adress-Beispiel:
 
-<center>
 ![IP Adrese](assets/images/ipadresse.png)
-</center>
 <center>Abbildung 3: IPv4 Beispiel</center>
 
 ### 2.2.1 IP-Adressklassen
@@ -131,7 +123,6 @@ Beispiele:
 - 11.0.0.0
 	- Klasse A Netzwerk
 
-+++
 #### 2.2.2.2 Broadcastadresse
 
 Pakete mit dieser Adresse gehen an jeden Rechner im Netz. Alle Host-Adressen-Bits haben den Wert 1
@@ -254,7 +245,6 @@ Beim User Datagram Protocol wird eine Verbindung ohne jegliche Sicherung aufgeba
 
 Beim Transmission Control Protocol dagegen würden Verluste in der Datenübertragung immer zu einer erneuten Anfrage führen, wodurch es gerade beim Streaming-Vorgang zu Aussetzern kommen könnte. Dafür wird jedoch jedes Datenpaket auf die Sicherung überprüft und erst nach erfolgreicher Validierung weiterverwendet (Baun, 2019, S. 175 ff.). 
  
- +++
 ## 2.6 Domain Name System (DNS)
 
 Neben der internen Datenübertragung wird in den meisten Rechnernetzen auch der Zugriff auf verschiedene Hosts mithilfe eindeutiger und für Laien leserlicher Namen gewährleistet. Diese Namen werden in der Netzwerktechnologie Domain-Namen oder nur Domain genannt. 
@@ -340,7 +330,6 @@ Eine Firewall ist eine Komponente zum Schutz eines (internen) Netzes bzw. einer 
 Eine Firewall-Variante ist die Bastion Hosts. Dabei existiert ein Rechner mit (mindestens) zwei Netzwerkkarten = Bastion Host. Dieser sorgt für die Paketfilterung. Dabei besteht ein Angebot von Diensten zum Zugriff von außen (z.B. Webserver). Andere Rechner des lokalen Netzes sind abgesichert und nach außen unsichtbar.
 
 
-+++
 # 3 Methoden: Erstellung eines Unternehmensnetzwerkes
 
 Nachdem die theoretischen Grundlagen moderner Rechnernetze besprochen wurden, kann für ein Beispielunternehmen ein internes Netzwerk aufgesetzt werden.\
@@ -359,7 +348,6 @@ Aufgrund des Umgangs mit sensiblen Daten in jenen Arbeitsgruppen, sollen sie log
 
 Um bestimmte Daten und Inhalte im internen Netz einsehen und teilen zu können, soll ein Intranet-Server aufgesetzt werden. Auf diesem Server wird eine Webseite betrieben, welche verschiedenste Unternehmensdaten beinhaltet. Somit könnten MitarbeiterInnen beispielsweise Geburtstage oder Speisepläne einsehen.
 
-+++
 ## 3.2 Planung des internen Netzwerkes
 
 Es sollen also zehn MitarbeiterInnen aus zwei Abteilungen in das interne Netzwerk integriert werden. Dabei wird davon ausgegangen, dass die MitarbeiterInnen während der Arbeitszeit im Büro an einem festen Platz tätig sind. Die Geräte können mithilfe eines Kabels integriert werden. Somit wird die Verbindung über ein LAN hergestellt. In Zukunft könnte über die Installation eines WLAN nachgedacht werden, um Gästen den kabellosen Zugang zum Internet zu gewährleisten.
@@ -409,7 +397,6 @@ Die Endgeräte sind zwar logisch und physisch voneinander getrennt, es besteht j
 Im Laufe der Planung wurde die physische Trennung der drei Subnetze mehrere Male angesprochen. Diese Lösung ist jedoch nur eine von zwei möglichen Varianten zur Aufteilung eines Netzwerkes. Der Router könnte auch lediglich eine Netzwerkkarte verwenden, um das interne Netzwerk zu verwalten. Aus Sicherheitsgründen ist dies aber nicht zu empfehlen, da das gesamte Unternehmensnetzwerk eingesehen werden könnte, sollte ein Angriff auf diese eine Netzwerkkarte erfolgreich ausgeführt worden sein. Werden die Netzwerke mithilfe physischer Netzwerkkarten voneinander getrennt, muss es dem Angreifer gelingen Zugang zum physischen Gerät des Routers zu erhalten, um auch die anderen Subnetze einzusehen.
 
 
-+++
 ## 3.3 Implementierung des Netzwerkes
 
 Ausgehend der vorangegangenen Planung, können die einzelnen Komponenten implementiert werden.
@@ -539,7 +526,6 @@ Die Konfigurationen treten erst nach Freischaltung und Start des Dienstes in Kra
 - `$ systemctl enable nftables`
 - `$ systemctl restart nftables`
 
-+++
 ### 3.3.4 Firewall
 
 Der ungesicherte Zugriff auf öffentliche Webserver ist mithilfe der bereits getätigten Einstellungen gegeben. 
@@ -608,7 +594,6 @@ To                Action          From
 ```
 
 
-+++
 ### 3.3.5 DNS
 
 Da alle Domain-Namen global im internen Netzwerk verwendet werden, wird der DNS-Service auf dem Router installiert:
@@ -745,7 +730,6 @@ Es kann auch getestet werden, ob der Webserver des Intranet erreichbar ist:
 - `$ ping intranet.company.local`
 - `$ ping internal.company.local`
 
-+++
 ### 3.3.6 Hosts
 
 Sobald die Subnetze erfolgreich definiert und konfiguriert wurden, können die Hosts in das Unternehmensnetzwerk eingebunden werden. Für die folgende Konfiguration wird aus jedem der drei Subnetze jeweils ein Beispiel-Host verwendet:
@@ -862,7 +846,6 @@ lease {
 
 Es werden die selben Einstellungen wie auf den Buchhaltungscomputern getätigt, da die IP-Adresse auch in diesem Fall dynamisch erstellt wird.
 
-+++
 # 4 Ergebnisse: Netzwerkarchitektur 
 
 Aus den bisher erarbeiteten Planungen und Installationen ergibt sich die folgende Netzwerkarchitektur (Abbildung 5). 
@@ -876,7 +859,6 @@ Ein zentraler Router verbindet das interne Unternehmensnetzwerk mit dem öffentl
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Das dritte Subnetz namens Vertrieb erhält ebenfalls IP-Adressklasse C und ermöglicht den Zugriff auf die Netzwerkkarte `enp0s9` mittels `192.0.4.1`. Da sich das Unternehmen auf den Vertrieb konzentriert, befinden sich bereits zum aktuellen Zeitpunkt sieben Hosts in diesem Subnetz. Drei dieser MitarbeiterInnen verbinden ihren Laptop mithilfe eines LAN-Kabels mit dem Vertriebs-Subnetz. Aufgrund der Konzentration auf diese Abteilung werden die IP-Adressen zwischen `192.0.4.10` und `192.0.4.50` dynamisch an die Hosts verteilt. Sollte sich diese Abteilung schnell vergrößern, reichen die verfügbaren IP-Adressen immer noch aus, da einerseits drei Hosts nicht dauerhaft mit dem Netz verbunden sind und eine hohe Wahrscheinlichkeit besteht, dass zu keinem Zeitpunkt alle angeschlossenen Geräte gleichzeitig auf das Internet zugreifen möchten. 
 
 
-+++
 # 5 Diskussion
 
 Im Laufe dieser Arbeit wurde ein funktionierendes Rechnernetz für ein fiktives Beispielunternehmen geplant und implementiert. Mithilfe der verwendeten Technologien konnten alle Hosts in das Netzwerk eingebunden werden und auf verschiedene Dienste zugreifen. Zu diesen Diensten gehört das öffentliche Internet, der Austausch von internen Daten und der Zugriff auf den Intranet-Server. All diese Funktionalitäten konnten ohne großen Aufwand installiert, konfiguriert und getestet werden. Dank moderner Services, die auf den Linux-Rechnern verwendet wurden, kann sich bei der Vernetzung eines Unternehmens auf die grundlegenden Aspekte konzentriert werden.
@@ -888,7 +870,6 @@ So kann auch über die verwendete Version der IP-Adresse diskutiert werden. IPv4
 Letztendlich gibt es auch in der Netzwerktechnologie viele verschiedene Wege, um das geplante Ziel zu erreichen. Wie und wofür sich schlussendlich entschieden wird, hängt in der realen Anwendung von unterschiedlichsten Faktoren ab. 
 
 
-+++
 # Literaturverzeichnis
 
 Baun, C. (2019). Computer Networks/Computernetze: Bilingual Edition: English–German/Zweisprachige Ausgabe: Englisch–Deutsch. Springer-Verlag.
