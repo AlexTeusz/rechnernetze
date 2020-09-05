@@ -2,7 +2,7 @@ Das folgende Dokument beschreibt die komplette Implementierung eines Linux-basie
 
 Um die unten genannten Konfigurationen, Dateien und Netzwerke selbstständig testen zu können, lade bitte die folgende VirtualBox Datei herunter:
 
-- [Download OVA File](https://alexteusz.s3-eu-west-1.amazonaws.com/repos/rechnernetze/CompanyNetwork.ova)
+- [Download OVA File](https://alexteusz.s3-eu-west-1.amazonaws.com/github/repos/rechnernetze/CompanyNetwork.ova)
 
 Die Publikation kann hier heruntergeladen werden:
 
